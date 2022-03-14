@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+
+<input type="text" id="Text1" name="fname"><br><br>
+
+
+
+<!-- Direct reference -->
+<script src="lib/browser/neo4j-web.min.js"></script>
+
+<!-- unpkg CDN non-minified -->
+<script src="https://unpkg.com/neo4j-driver"></script>
+<!-- unpkg CDN minified for production use, version X.Y.Z -->
+<!--<script src="https://unpkg.com/neo4j-driver@X.Y.Z/lib/browser/neo4j-web.min.js"></script>-->
+
+<!-- jsDelivr CDN non-minified -->
+<script src="https://cdn.jsdelivr.net/npm/neo4j-driver"></script>
+<!-- jsDelivr CDN minified for production use, version X.Y.Z -->
+<!--<script src="https://cdn.jsdelivr.net/npm/neo4j-driver@X.Y.Z/lib/browser/neo4j-web.min.js"></script>-->
+
+<script>
+	fetch('http://localhost:3000/abc').then((res) => res.json()).then(data => {
+		document.querySelector("#Text1").value = data.data;
+	});
+</script>
+
+</body>
+</html>
